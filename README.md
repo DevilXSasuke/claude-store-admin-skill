@@ -2,9 +2,13 @@
 
 A Claude Code skill for designing and implementing an admin-only Next.js/React ecommerce panel inspired by WooCommerce. It is a reusable instruction package, not a working admin application or a WordPress dependency.
 
+## Purpose
+
+Guide Claude Code to create or improve a feature-rich admin panel with familiar WooCommerce look and feel: hierarchical dark sidebar, compact top bar, light workspace, actionable dashboard widgets, operational tables, product-data sections and focused settings. Generate reusable, typed, accessible Next.js/React components connected to the consuming project's actual APIs. Keep the work limited to admin management.
+
 ## Scope
 
-Products and variations, orders and refunds, stock, customers, coupons, analytics, content/media, provider integrations, settings, staff permissions and audit trails. Includes a WooCommerce-inspired visual system, EN/AR and RTL requirements, tool-selection guidance and acceptance scenarios. Optional GameX guidance is isolated from the generic workflow.
+Products and variations, orders and refunds, stock, customers, coupons, analytics, content/media, provider integrations, settings, staff permissions and audit trails. Includes a WooCommerce-inspired visual system, EN/AR and RTL requirements, tool-selection guidance and acceptance scenarios. The plugin is generic across businesses, brands, countries and providers; discover each application's configuration and integrations from its own code and explicit requirements.
 
 ## Install from the Claude Code marketplace
 
@@ -61,7 +65,6 @@ For design without code changes:
 - `references/features.md`: navigation and management features.
 - `references/design-system.md`: visual tokens, screen patterns, accessibility and RTL.
 - `references/implementation.md`: recommended tools, boundaries and verification.
-- `references/gamex-profile.md`: optional GameX context; verify integrations before use.
 - `references/sources.md`: official documentation and provenance.
 
 ## Defaults and limits

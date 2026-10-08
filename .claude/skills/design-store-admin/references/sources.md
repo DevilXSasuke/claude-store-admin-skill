@@ -1,6 +1,6 @@
 # Official sources and provenance
 
-Research checked 2026-10-08. Recheck official documentation for the installed version when implementing. The feature priorities, color tokens, proposed routes and GameX extensions are authored recommendations, not official WooCommerce requirements.
+Research checked 2026-10-08. Recheck official documentation for the installed version when implementing. The feature priorities, color tokens, proposed routes and optional extension guidance are authored recommendations, not official WooCommerce requirements.
 
 | Official source | What it informs |
 | --- | --- |
@@ -16,4 +16,4 @@ Research checked 2026-10-08. Recheck official documentation for the installed ve
 | https://ui.shadcn.com/docs/components/data-table | Composable table UI patterns |
 | https://tanstack.com/query/latest/docs/framework/react/overview | Server-state fetching and cache management |
 
-Do not assume WooCommerce core includes the candidate GameX providers or all optional modules; many require extensions or custom integration. No WordPress installation is needed to use this skill with an existing custom backend.
+Do not assume WooCommerce core includes every commerce provider or all optional modules; many require extensions or custom integration. No WordPress installation is needed to use this skill with an existing custom backend.

@@ -1,7 +1,7 @@
 {
   "name": "store-admin",
-  "version": "1.0.0",
-  "description": "WooCommerce-style admin design for Next.js and React, including EN/AR, permissions, commerce workflows and GameX guidance.",
+  "version": "1.1.0",
+  "description": "Generic WooCommerce-style admin panel guidance for Next.js and React: navigation, layout, management capabilities, accessible UI and correct implementation.",
   "author": {
     "name": "Ali Alaleeli"
   },

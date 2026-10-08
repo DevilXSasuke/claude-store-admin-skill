@@ -7,7 +7,7 @@
     {
       "name": "store-admin",
       "source": "./",
-      "description": "Design and implement WooCommerce-style Next.js/React store administration."
+      "description": "Generic WooCommerce-style Next.js/React admin panel design and implementation."
     }
   ]
 }

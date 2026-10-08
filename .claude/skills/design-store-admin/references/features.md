@@ -41,6 +41,12 @@ Reuse existing role names and capabilities. If absent, propose: owner/super admi
 1. Existing shell/auth integration, products and orders with detail/edit states.
 2. Inventory, customers, discounts, imports/exports and operational integrations.
 3. Analytics, content/media, staff settings, audit history.
-4. Optional saved dashboard layouts, advanced segmentation, marketplace settlement tools and extensions.
+4. Optional saved dashboard layouts, advanced segmentation, additional provider adapters and domain-specific extensions.
 
 Change this ordering to match the requested task and verified backend readiness.
+
+## Generic capability extensions
+
+Expose these only when requested and backed by a real data/service contract: returns/RMA, downloadable products, subscriptions, multi-location inventory, multistore/tenant management, shipping labels, abandoned checkout reporting, scheduled promotions, automated notifications and accounting reconciliation. Show extension configuration as supported provider modules rather than WordPress plugin installation controls.
+
+Keep store name, currency, tax labels, timezone, locale, brands, product categories and provider names configurable. Do not select a country, gateway, accounting service, product industry or brand without current project evidence. Maintain a reusable generic core and add business-specific adapters in the consuming application.

@@ -58,3 +58,13 @@ Select the scenarios relevant to the change; use isolated fixtures and sandbox p
 - Mock/demo fixtures cannot be mistaken for live records or shipped in production paths.
 
 Run existing typecheck, lint and relevant build/test commands from package scripts, not invented commands. If the environment lacks backend access, browser tooling or sandbox credentials, report that limitation and mark affected scenarios unverified. Screenshot inspection complements automated tests; neither proves live payment correctness.
+
+## Code-generation conventions
+
+Use strict TypeScript and typed domain/DTO models; avoid untyped catch-all props and unchecked casts for API payloads. Keep network calls in a shared API layer, schemas in the established validation layer and permissions in a shared capability policy backed by server enforcement. Centralize semantic status labels, money/date formatters and common table/filter logic. Preserve dependency versions compatible with the lockfile.
+
+Separate server/client code and never import server credentials or database clients into browser components. Prefer a small focused component boundary to marking an entire admin application as a client component. Implement URL-backed query state without leaking private values; scope saved views to staff/tenant where appropriate. Reuse actual route conventions and UI tokens; do not generate a standalone parallel admin application unless requested.
+
+Represent modules with typed navigation configuration containing stable keys, route, label, icon, optional children and required capability. Derive visible links from authorized capabilities, while enforcing the same actions server-side. Avoid checking raw role strings independently throughout UI components.
+
+Before finishing, check for broken imports, stale menu links, unhandled async errors, missing keys, inaccessible dialogs, client/server boundary errors and accidental fixture imports. Confirm enabled actions persist and reload correctly. A generic admin plugin should not require a particular brand, region, database, authentication provider or payment gateway to guide implementation.
