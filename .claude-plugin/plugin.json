@@ -1,0 +1,12 @@
+{
+  "name": "store-admin",
+  "version": "1.0.0",
+  "description": "WooCommerce-style admin design for Next.js and React, including EN/AR, permissions, commerce workflows and GameX guidance.",
+  "author": {
+    "name": "Ali Alaleeli"
+  },
+  "repository": "https://github.com/DevilXSasuke/claude-store-admin-skill",
+  "skills": [
+    "./.claude/skills/"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "store-admin-marketplace",
+  "owner": {
+    "name": "Ali Alaleeli"
+  },
+  "plugins": [
+    {
+      "name": "store-admin",
+      "source": "./",
+      "description": "Design and implement WooCommerce-style Next.js/React store administration."
+    }
+  ]
+}

@@ -6,7 +6,38 @@ A Claude Code skill for designing and implementing an admin-only Next.js/React e
 
 Products and variations, orders and refunds, stock, customers, coupons, analytics, content/media, provider integrations, settings, staff permissions and audit trails. Includes a WooCommerce-inspired visual system, EN/AR and RTL requirements, tool-selection guidance and acceptance scenarios. Optional GameX guidance is isolated from the generic workflow.
 
-## Install into your website project
+## Install from the Claude Code marketplace
+
+Run these commands in your terminal:
+
+```bash
+claude plugin marketplace add DevilXSasuke/claude-store-admin-skill
+claude plugin install store-admin@store-admin-marketplace
+```
+
+Or inside Claude Code:
+
+```text
+/plugin marketplace add DevilXSasuke/claude-store-admin-skill
+/plugin install store-admin@store-admin-marketplace
+```
+
+Then invoke the installed plugin skill:
+
+```text
+/store-admin:design-store-admin Design my WooCommerce-style admin panel for Next.js/React with English and Arabic support. Inspect existing APIs and permissions first.
+```
+
+This repository hosts a self-managed marketplace. It is not an Anthropic official-directory listing. No MCP servers, credentials, hooks or executable install scripts are required.
+
+To receive future releases:
+
+```bash
+claude plugin marketplace update store-admin-marketplace
+claude plugin update store-admin@store-admin-marketplace
+```
+
+## Manual installation (alternative)
 
 Copy `.claude/skills/design-store-admin` from this repository into the same path in your website repository. Keep its `references` folder beside `SKILL.md`.
 
