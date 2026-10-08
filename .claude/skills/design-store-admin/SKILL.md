@@ -1,6 +1,6 @@
 ---
 name: design-store-admin
-description: Design, implement, or improve an admin-only ecommerce control panel for Next.js and React using familiar WooCommerce and WordPress management workflows. Use for store back-office screens, product and variation editors, orders, inventory, refunds, customers, coupons, analytics, content, integrations, settings, and admin permissions. Exclude public storefront design.
+description: Design, implement, or improve an admin-only ecommerce control panel for Next.js and React using familiar WooCommerce and WordPress management workflows. Use for store back-office screens, product and variation editors, orders, inventory, refunds, customers, coupons, analytics, content, integrations, settings, RBAC and security, backend API creation, and SEO management. Exclude public storefront design.
 ---
 
 # Design Store Admin
@@ -12,6 +12,9 @@ Build an operational store admin with familiar WooCommerce navigation and modern
 - Read [features.md](references/features.md) for navigation, feature priorities, and detailed screen requirements.
 - Read [design-system.md](references/design-system.md) before creating screens or changing visual style.
 - Read [implementation.md](references/implementation.md) for tool selection, API boundaries, security, and validation.
+- Read [rbac-security.md](references/rbac-security.md) for roles, capability matrices, security implementation, and negative tests.
+- Read [api-design.md](references/api-design.md) when creating backend endpoints, OpenAPI contracts, integrations, or API-client management.
+- Read [seo-content.md](references/seo-content.md) when adding SEO editors, metadata publication, redirects, or sitemap controls.
 - Read [sources.md](references/sources.md) when checking a WooCommerce behavior or library capability. Distinguish sourced behavior from this skill's proposed design.
 
 ## 1. Inspect before designing
@@ -52,7 +55,11 @@ Require backend permissions and audit events for edits, exports, integration cha
 
 Never turn an admin redesign into permission widening, production data deletion, migration execution, or automatic payment capture. Stay within the user's authorized task; produce reviewable changes before any separate deployment approval that the project requires.
 
-## 6. Verify and hand off
+## 6. Implement permissions, APIs and SEO when in scope
+
+Use the relevant references to turn management capabilities into working server behavior. Define RBAC capabilities and resource constraints before wiring actions. Build missing APIs through the established backend rather than inventing frontend persistence. Treat SEO as admin-managed public metadata with a verified rendering path, while keeping admin pages private. Keep role management, external API credentials and publishing controls separately permissioned. Provide meaningful negative tests and report missing infrastructure instead of claiming full security or WordPress feature parity.
+
+## 7. Verify and hand off
 
 Run repository checks appropriate to the changed slice. Exercise the acceptance scenarios in implementation.md with isolated test data. Inspect rendered desktop and narrow layouts, keyboard interaction, Arabic RTL when enabled, and at least one role with restricted access. Record actual commands, results, and unavailable checks; do not claim visual or live gateway verification without performing it.
 

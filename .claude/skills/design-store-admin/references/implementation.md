@@ -68,3 +68,7 @@ Separate server/client code and never import server credentials or database clie
 Represent modules with typed navigation configuration containing stable keys, route, label, icon, optional children and required capability. Derive visible links from authorized capabilities, while enforcing the same actions server-side. Avoid checking raw role strings independently throughout UI components.
 
 Before finishing, check for broken imports, stale menu links, unhandled async errors, missing keys, inaccessible dialogs, client/server boundary errors and accidental fixture imports. Confirm enabled actions persist and reload correctly. A generic admin plugin should not require a particular brand, region, database, authentication provider or payment gateway to guide implementation.
+
+## Backend, security and SEO deliverables
+
+For changed backend capabilities, deliver endpoint contracts, validated DTOs, domain services, permission policies, persistence/job behavior and typed UI integration. For RBAC/security changes, deliver a capability matrix and focused denial/revocation/object-scope tests. For SEO changes, deliver editor-to-renderer wiring and publication/indexing checks. Read the dedicated references before implementing these areas. Do not treat OpenAPI, role dropdowns or SEO forms as proof of working enforcement or rendering.

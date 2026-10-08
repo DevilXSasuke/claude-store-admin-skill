@@ -50,3 +50,15 @@ Change this ordering to match the requested task and verified backend readiness.
 Expose these only when requested and backed by a real data/service contract: returns/RMA, downloadable products, subscriptions, multi-location inventory, multistore/tenant management, shipping labels, abandoned checkout reporting, scheduled promotions, automated notifications and accounting reconciliation. Show extension configuration as supported provider modules rather than WordPress plugin installation controls.
 
 Keep store name, currency, tax labels, timezone, locale, brands, product categories and provider names configurable. Do not select a country, gateway, accounting service, product industry or brand without current project evidence. Maintain a reusable generic core and add business-specific adapters in the consuming application.
+
+## RBAC, APIs, SEO and administration extensions
+
+| Module | Management functions | Read for implementation |
+| --- | --- | --- |
+| Staff and roles | Invitations, account state, permission matrix, scoped grants, session revocation, audit history | rbac-security.md |
+| Security settings | Existing MFA/session policy, privileged-action controls, security events and redacted diagnostics | rbac-security.md |
+| API access | API documentation, scoped integration clients, expiry/rotation/revocation, usage and errors | api-design.md |
+| SEO | Product/page/category metadata, defaults/overrides, publication, slug changes, redirects, sitemap status | seo-content.md |
+| Operations | Imports/exports, background tasks, notification templates, integration failures and authorized retries | api-design.md and implementation.md |
+
+Keep API documentation and client management distinct from implementing the backend itself. Keep SEO on products/content editors plus optional centralized audits, rather than adding redundant standalone settings for every field. Expose only settings that the actual services can enforce.

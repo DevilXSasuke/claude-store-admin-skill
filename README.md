@@ -67,6 +67,18 @@ For design without code changes:
 - `references/implementation.md`: recommended tools, boundaries and verification.
 - `references/sources.md`: official documentation and provenance.
 
+## RBAC, security, APIs and SEO
+
+Version 1.2.0 adds role/capability matrices, record/tenant/field constraints, staff and API-client management guidance, security implementation and denial tests, backend endpoint/OpenAPI creation, and SEO editor-to-public-renderer wiring. These are instructions to generate and verify code; they do not certify an application, provision accounts/credentials or guarantee WordPress plugin parity.
+
+```text
+/store-admin:design-store-admin Build the admin products and orders workflows, define RBAC permissions, implement missing APIs in the existing backend, and add product/page SEO management. Preserve the WooCommerce-style shell and verify security and persistence.
+```
+
+- `references/rbac-security.md`: capability matrix, sessions, security controls and negative tests.
+- `references/api-design.md`: endpoints, OpenAPI, domain services, jobs and external API clients.
+- `references/seo-content.md`: metadata editors, publishing, redirects, sitemaps and rendering checks.
+
 ## Defaults and limits
 
 Retain installed libraries and existing APIs. Proposed tools include Tailwind/shadcn, TanStack Table/Query, React Hook Form/Zod and Playwright when appropriate. Do not invent API success, widen permissions or issue live payments/shipping/SMS as part of UI testing. The skill does not configure or require any MCP service.
